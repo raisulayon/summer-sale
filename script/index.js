@@ -3,7 +3,8 @@ let totalPrice =0;
 
 function handleClickBtn(target){
 const selectedProducts = document.getElementById('calculation-entry');
-const productName = target.parentNode.childNodes[3].innerText;
+// const productName = target.parentNode.childNodes[3].innerText;
+console.log(target.parentNode.childNodes[3].innerHtml);
 const li = document.createElement('li');
 li.innerText = productName;
 selectedProducts.appendChild(li);

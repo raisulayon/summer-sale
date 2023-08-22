@@ -59,18 +59,19 @@
                 <section>
                     <h2 class="text-4xl font-semibold mb-8">Kitchenware</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
                         <!-- card-1 -->
-                        <div id="product1" class="card bg-base-100 shadow-lg">
+                        <div id="product1" onclick="handleClickBtn(this)" class="card bg-base-100 shadow-lg">
                             <figure><img src="/images/prod1.png" alt="product1" class="bg-[#F8F8F8] px-16 py-8 mt-4" /></figure>
                             <div class="card-body text-center items-center">
-                                <div class="rating">
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                                </div>
-                              <h2 onclick="handleClickBtn(this)" id="card-title" class="text-xl font-semibold hover:cursor-default">K. Accessories</h2>
+                              <div class="rating items-center mx-auto">
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            </div>
+                              <h2 id="card-title" class="text-xl font-semibold hover:cursor-default">K. Accessories</h2>
                               <p class="text-xl text-gray-400"><span id="prod1">39.00</span> Tk.</p>
                             </div>
                         </div>
