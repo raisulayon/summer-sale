@@ -3,16 +3,18 @@ let totalPrice =0;
 
 function handleClickBtn(target){
 const selectedProducts = document.getElementById('calculation-entry');
-// const productName = target.parentNode.childNodes[3].innerText;
-console.log(target.parentNode.childNodes[3].innerHtml);
+// getting the item name
+const productName = target.childNodes[5].childNodes[1].innerText;
 const li = document.createElement('li');
 li.innerText = productName;
 selectedProducts.appendChild(li);
 
-const newPrice = target.parentNode.childNodes[5].innerText.split(" ")[0];
+// getting the item price
+const newPrice = target.childNodes[5].childNodes[3].innerText.split(' ')[0];
 totalPrice = parseInt(totalPrice) + parseInt(newPrice);
 document.getElementById('total-price').innerText=totalPrice;
 
+// setting the price
 const element = document.getElementById('total');
 const total = totalPrice;
 element.innerText = total;
@@ -31,10 +33,11 @@ document.getElementById('coupon-input').addEventListener('keyup', function(event
 
 document.getElementById('coupon-btn').addEventListener('click', function(){
     const discount = document.getElementById('discount-price');
-    const discountPrice = (totalPrice * 0.20).toFixed(2);
-    discount.innerText = discountPrice;
     if(totalPrice > 200){
+        const discountPrice = (totalPrice * 0.20).toFixed(2);
+        discount.innerText = discountPrice;
         total = totalPrice-discountPrice;
         document.getElementById('total').innerText = total;
     }
+
 })
